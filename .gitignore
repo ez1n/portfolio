@@ -1,0 +1,11 @@
+# Logs
+.yarn
+.pnp.cjs
+.pnp.loader.mjs
+
+# dotenv
+.env
+
+# Editor directories and files
+.vscode/*
+.idea
