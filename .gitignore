@@ -9,3 +9,6 @@
 # Editor directories and files
 .vscode/*
 .idea
+
+#build
+dist

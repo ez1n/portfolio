@@ -1,0 +1,90 @@
+:root {
+  --main-bg-color: rgb(255, 226, 226);
+  --main-link-color: rgb(63, 63, 63);
+  --main-link-hover-color: indianred;
+}
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-link-color);
+}
+
+a:hover {
+  color: var(--main-link-hover-color);
+}
+
+#about-me,
+#history,
+#skill,
+#project {
+  min-height: 100vh;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  background-color: var(--main-bg-color);
+}
+
+.menu-container {
+  display: flex;
+  justify-content: space-around;
+  flex: 0.8;
+}
+
+.menu-item {
+  cursor: pointer;
+}
+
+.icon-container {
+  flex: 0.1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.github-icon {
+  width: 50px;
+}
+
+.blog-icon {
+  width: 40px;
+}
+
+.main {
+  padding: 2rem;
+}
+
+.profile-img {
+  width: 15rem;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: var(--main-bg-color);
+  height: 7vh;
+}
