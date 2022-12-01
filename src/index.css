@@ -1,11 +1,13 @@
 :root {
   --main-bg-color: rgb(255, 226, 226);
-  --main-link-color: rgb(63, 63, 63);
-  --main-link-hover-color: indianred;
+  --main-font-color: #4b2c1b;
+  --main-link-color: rgb(129, 69, 41);
+  --main-link-hover-color: rgb(236, 131, 154);
 }
 
 * {
   scroll-behavior: smooth;
+  color: var(--main-font-color);
 }
 
 body {
@@ -19,6 +21,7 @@ li {
 a {
   text-decoration: none;
   color: var(--main-link-color);
+  transition: all 1s;
 }
 
 a:hover {
@@ -30,30 +33,64 @@ a:hover {
 #skill,
 #project {
   min-height: 100vh;
+  padding: 2rem;
+}
+
+.body {
+  display: flex;
 }
 
 .header {
   position: sticky;
   top: 0;
+  left: 0;
+  min-width: fit-content;
+  height: 97vh;
+  width: 20vw;
+  padding: 1rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-color: var(--main-bg-color);
 }
 
 .menu-container {
+  flex: 0.7;
+  width: 100%;
+  padding: 0;
   display: flex;
-  justify-content: space-around;
-  flex: 0.8;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .menu-item {
   cursor: pointer;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 0;
+  transition: all 1.5s;
+}
+
+.menu-item:hover {
+  transform: rotateX(360deg);
+}
+
+.contact {
+  flex: 0.15;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: var(--main-bg-color);
 }
 
 .icon-container {
+  width: 100%;
   flex: 0.1;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -66,6 +103,7 @@ a:hover {
 }
 
 .main {
+  width: 100%;
   padding: 2rem;
 }
 
@@ -76,15 +114,4 @@ a:hover {
 .profile {
   display: flex;
   align-items: center;
-}
-
-.footer {
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  background-color: var(--main-bg-color);
-  height: 7vh;
 }
