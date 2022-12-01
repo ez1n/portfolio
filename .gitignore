@@ -3,8 +3,12 @@
 .pnp.cjs
 .pnp.loader.mjs
 
-# dotenv
+# Dependency directories
+node_modules/
+
+# dotenv environment variables file
 .env
+.env.test
 
 # Editor directories and files
 .vscode/*
