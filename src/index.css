@@ -1,4 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+
 :root {
+  --main-color: #94e6ff;
   --main-bg-color: #034078;
   --main-font-color: #16425b;
   --main-link-color: #e8e8e4;
@@ -9,9 +14,17 @@
   --section-bg-color-4: #eaf4f4;
 }
 
+@font-face {
+  font-family: 'LINESeedKR-Bd';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/LINESeedKR-Bd.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+}
+
 * {
   scroll-behavior: smooth;
   color: var(--main-font-color);
+  font-family: 'LINESeedKR-Bd';
 }
 
 body {
@@ -26,6 +39,7 @@ a {
   text-decoration: none;
   color: var(--main-link-color);
   transition: all 0.5s;
+  cursor: none;
 }
 
 a:hover {
@@ -62,7 +76,31 @@ section {
 }
 
 .body {
+  position: relative;
   display: flex;
+  cursor: none;
+}
+
+.pointer1 {
+  position: absolute;
+  z-index: 2;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  transform: translate(0px, 0px);
+  transition: opacity 1s;
+}
+
+.pointer2 {
+  position: absolute;
+  z-index: 1;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: var(--main-bg-color);
+  transform: translate(0px, 0px);
+  transition: opacity 1s;
 }
 
 .header {
@@ -106,24 +144,24 @@ section {
 }
 
 .menu-item {
-  cursor: pointer;
   font-size: 2rem;
   font-weight: bold;
   text-align: center;
   padding: 0;
 }
 
-.menu-item.menu-top,
-.menu-item.menu-bottom {
+.menu-item.before,
+.menu-item.after {
   transition: all 1s;
 }
 
-.menu-item.menu-top:hover {
+.menu-item.before:hover {
   transform: rotateZ(20deg);
 }
 
-.menu-item.menu-bottom:hover {
-  transform: rotateZ(-20deg);
+.menu-item.after:hover {
+  /* transform: rotateZ(-20deg); */
+  transform: rotateX(360deg);
 }
 
 .contact {
