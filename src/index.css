@@ -39,7 +39,6 @@ a {
   text-decoration: none;
   color: var(--main-link-color);
   transition: all 0.5s;
-  cursor: none;
 }
 
 a:hover {
@@ -77,7 +76,6 @@ section {
 .body {
   position: relative;
   display: flex;
-  cursor: none;
 }
 
 .pointer1,
@@ -85,7 +83,7 @@ section {
   position: absolute;
   border-radius: 50%;
   transform: translate(0px, 0px);
-  transition: opacity 1s;
+  transition: all 0.1s;
   opacity: 0;
 }
 

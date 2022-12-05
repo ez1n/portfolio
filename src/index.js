@@ -24,8 +24,8 @@ observer.observe(section[3]);
 body.addEventListener('pointermove', (e) => {
   pointer1.style.opacity = 1;
   pointer2.style.opacity = 1;
-  pointer1.style.transform = 'translate(' + e.pageX + 'px,' + e.pageY + 'px)';
-  pointer2.style.transform = 'translate(' + (e.pageX + 10) + 'px,' + (e.pageY + 10) + 'px)';
+  pointer1.style.transform = 'translate(' + (e.pageX + 10) + 'px,' + (e.pageY + 10) + 'px)';
+  pointer2.style.transform = 'translate(' + (e.pageX + 20) + 'px,' + (e.pageY + 20) + 'px)';
 });
 
 body.addEventListener('pointerleave', (e) => {
