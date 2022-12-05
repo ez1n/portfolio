@@ -9,8 +9,6 @@ let observer = new IntersectionObserver((e) => {
   e.forEach((item) => {
     if (item.isIntersecting) {
       item.target.style.opacity = 1;
-      // window.location.pathname = item.target.id
-      // console.log(window.location.pathname)
     } else {
       item.target.style.opacity = 0;
     }

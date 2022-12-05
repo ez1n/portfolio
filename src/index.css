@@ -56,7 +56,6 @@ section {
 #skill,
 #project {
   min-height: 100vh;
-  padding: 2rem;
 }
 
 #about-me {
@@ -81,15 +80,20 @@ section {
   cursor: none;
 }
 
-.pointer1 {
+.pointer1,
+.pointer2 {
   position: absolute;
+  border-radius: 50%;
+  transform: translate(0px, 0px);
+  transition: opacity 1s;
+  opacity: 0;
+}
+
+.pointer1 {
   z-index: 2;
   width: 18px;
   height: 18px;
-  border-radius: 50%;
   background-color: var(--main-color);
-  transform: translate(0px, 0px);
-  transition: opacity 1s;
 }
 
 .pointer2 {
@@ -97,10 +101,7 @@ section {
   z-index: 1;
   width: 25px;
   height: 25px;
-  border-radius: 50%;
   background-color: var(--main-bg-color);
-  transform: translate(0px, 0px);
-  transition: opacity 1s;
 }
 
 .header {
@@ -176,6 +177,10 @@ section {
 
 .main {
   width: 100%;
+}
+
+.title {
+  margin: 0;
 }
 
 .profile {
