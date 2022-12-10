@@ -11,6 +11,10 @@ web frontend portfolio
 - css
 
 
+## Deploy
+- netlify
+
+
 ## Test
 
 
