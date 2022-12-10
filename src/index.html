@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./index.css">
   <link rel="stylesheet" href="./mobile.css">
-  <title>portfolio-ez1n</title>
+  <title>전예진 | 포트폴리오</title>
 </head>
 
 <body>
@@ -31,16 +31,16 @@
       </div>
 
       <menu type="toolbar" class="menu-container">
-        <menu type="content" class="menu-item before">
+        <menu type="content" class="menu-item">
           <a href="#about-me">About Me</a>
         </menu>
-        <menu type="content" class="menu-item after">
+        <menu type="content" class="menu-item">
           <a href="#history">History</a>
         </menu>
-        <menu type="content" class="menu-item before">
+        <menu type="content" class="menu-item">
           <a href="#skill">Skills</a>
         </menu>
-        <menu type="content" class="menu-item after">
+        <menu type="content" class="menu-item">
           <a href="#project">Projects</a>
         </menu>
       </menu>
@@ -64,19 +64,9 @@
     <main class="main">
       <!-- about me -->
       <section id="about-me">
-        <h1 class="title">도전을 두려워하지 않는 프론트엔드 개발자, 전예진입니다.</h1>
+        <h2 class="title">ABOUT ME</h2>
 
-        <div class="profile">
-          <img class="profile-img" src="./images/profile.jpg" alt="profile" />
-
-          <!-- 슬라이드로 나타낼까? -->
-          <article>
-            <p>새로운 기술을 학습하는 것을 두려워하지 않습니다.</p>
-            <p>부족한 부분을 위해 꾸준히 노력합니다.</p>
-            <p>사용자의 입장에서 생각하며 개발합니다.</p>
-            <p>소통을 중요하게 생각합니다.</p>
-          </article>
-        </div>
+        <h2>도전을 두려워하지 않는 프론트엔드 개발자, 전예진입니다.</h2>
       </section>
 
       <!-- history -->
@@ -84,9 +74,9 @@
         <h2 class="title">History</h2>
 
         <ul>
-          <li>2017.03 - 2022.02 : 명지대학교 수학과 졸업</li>
-          <li>2021.12.17 : SQL 개발자 (SQLD) 취득</li>
-          <li>2022.11.25 : 정보처리기사 취득</li>
+          <li>2017. 03 - 2022. 02 : 명지대학교 수학과 졸업</li>
+          <li>2021. 12. 17 : SQL 개발자 (SQLD) 취득</li>
+          <li>2022. 11. 25 : 정보처리기사 취득</li>
         </ul>
 
         <article>
@@ -117,12 +107,11 @@
         <h2 class="title">Skills</h2>
 
         <article>
-          주로 React를 주 기술로 개발하고 있습니다.
+          React를 주 기술로 개발하고 있습니다.
           Javascript 기반의 프로젝트 경험이 있으며 정적 타입분석을 통해 Typescript를 공부하고 있습니다.
         </article>
 
         <article>
-          <h1>Language</h1>
           <ol>
             <li>HTML & CSS</li>
             <li>웹개발의 기본인 HTML과 CSS를 이용하여 UI를 구현할 수 있습니다.</li>
@@ -133,12 +122,8 @@
           <ol>
             <li>Javascript & Typescript</li>
             <li>ES6+ Javascript 문법에 익숙합니다.</li>
-
           </ol>
-        </article>
 
-        <article>
-          <h1>Library & Framework</h1>
           <ol>
             <li>React</li>
             <li>함수형 컴포넌트와 Hook을 주로 사용합니다.</li>
@@ -153,13 +138,51 @@
         <h2 class="title">Projects</h2>
         <article>
           <h1>EK하나관광 홈페이지 리뉴얼 (2022.06 - 2022.07)</h1>
-          <ol>
-            <li>url : <a href="http://www.ekhanabus.co.kr" target="_blank">http://www.ekhanabus.co.kr</a></li>
-            <li>소개 : 관광버스 대절 회사인 EK하나관광 홈페이지 입니다. </li>
-            <li>기술 : Javascript, React, PostCSS</li>
-          </ol>
+
+          <div class="slide-container">
+            <button class="slide-button ekhana-prev">
+              <img src="./images/previous.png" alt="prev arrow">
+            </button>
+
+            <ol class="slide-wrapper">
+              <li class="slide-item ektour">
+                <img class="slide-img" src="./images/ektour/main.png" alt="이케이투어" style="object-fit: scale-down;">
+              </li>
+              <li class="slide-item ektour">
+                <img class="slide-img" src="./images/ektour/estimateList.png" alt="이케이투어"
+                  style="object-fit: scale-down;">
+              </li>
+              <li class="slide-item ektour">
+                <img class="slide-img" src="./images/ektour/myEstimate.png" alt="이케이투어" style="object-fit: scale-down;">
+              </li>
+              <li class="slide-item ektour">
+                <img class="slide-img" src="./images/ektour/question.png" alt="이케이투어" style="object-fit: scale-down;">
+              </li>
+
+              <li class="slide-item mobile ektour">
+                <img class="slide-img" src="./images/ektour/mobile-main.png" alt="이케이투어"
+                  style="object-fit: scale-down;">
+                <img class="slide-img" src="./images/ektour/mobile-main2.png" alt="이케이투어"
+                  style="object-fit: scale-down;">
+              </li>
+              <li class="slide-item mobile ektour">
+                <img class="slide-img" src="./images/ektour/mobile-mian3.png" alt="이케이투어"
+                  style="object-fit: scale-down;">
+                <img class="slide-img" src="./images/ektour/mobile-myEstimate.png" alt="이케이투어"
+                  style="object-fit: scale-down;">
+              </li>
+            </ol>
+
+            <button class="slide-button ekhana-next">
+              <img src="./images/next.png" alt="next arrow">
+            </button>
+          </div>
 
           <ol>
+            <li>url : <a href="http://www.ekhanabus.co.kr" target="_blank">http://www.ekhanabus.co.kr</a></li>
+            <li>소개 : 관광버스 대절 회사인 EK하나관광 홈페이지 리뉴얼 프로젝트 입니다. </li>
+            <li>기술 : Javascript, React, PostCSS</li>
+            <li>팀원 : FE - 1, BE - 2</li>
             <li>
               ASP로 제작되어 유지보수가 어렵고 오래된 디자인으로 인해 사용자 편의성이 낮은 기존 홈페이지에서
               새로운 디자인과 SPA를 통해 사용자 경험과 편의성을 증진시켰습니다.
@@ -171,33 +194,94 @@
 
         <article>
           <h1>HNTECH 홈페이지 개발 (2022.08 - 2022.11)</h1>
+
+          <div class="slide-container">
+            <button class="slide-button hntech-prev">
+              <img src="./images/previous.png" alt="prev arrow">
+            </button>
+
+            <ol class="slide-wrapper">
+              <li class="slide-item hntech">
+                <img class="slide-img" src="./images/hntech/main.png" alt="에이치엔테크" style="object-fit: scale-down;">
+              </li>
+              <li class="slide-item hntech">
+                <img class="slide-img" src="./images/hntech/mainCategory.png" alt="에이치엔테크"
+                  style="object-fit: scale-down;">
+              </li>
+              <li class="slide-item hntech">
+                <img class="slide-img" src="./images/hntech/middleCategory.png" alt="에이치엔테크"
+                  style="object-fit: scale-down;">
+              </li>
+              <li class="slide-item hntech">
+                <img class="slide-img" src="./images/hntech/company.png" alt="에이치엔테크" style="object-fit: scale-down;">
+              </li>
+              <li class="slide-item hntech">
+                <img class="slide-img" src="./images/hntech/document.png" alt="에이치엔테크" style="object-fit: scale-down;">
+              </li>
+              <li class="slide-item hntech">
+                <img class="slide-img" src="./images/hntech/archive.png" alt="에이치엔테크" style="object-fit: scale-down;">
+              </li>
+              <li class="slide-item hntech">
+                <img class="slide-img" src="./images/hntech/archiveDetail.png" alt="에이치엔테크"
+                  style="object-fit: scale-down;">
+              </li>
+              <li class="slide-item hntech">
+                <img class="slide-img" src="./images/hntech/archiveForm.png" alt="에이치엔테크"
+                  style="object-fit: scale-down;">
+              </li>
+
+              <li class="slide-item mobile hntech">
+                <img class="slide-img" src="./images/hntech/mobile-main.png" alt="에이치엔테크"
+                  style="object-fit: scale-down;">
+                <img class="slide-img" src="./images/hntech/mobile-company.png" alt="에이치엔테크"
+                  style="object-fit: scale-down;">
+              </li>
+              <li class="slide-item mobile hntech">
+                <img class="slide-img" src="./images/hntech/mobile-archive.png" alt="에이치엔테크"
+                  style="object-fit: scale-down;">
+                <img class="slide-img" src="./images/hntech/mobile-archiveDetail.png" alt="에이치엔테크"
+                  style="object-fit: scale-down;">
+              </li>
+            </ol>
+
+            <button class="slide-button hntech-next">
+              <img src="./images/next.png" alt="next arrow">
+            </button>
+          </div>
+
           <ol>
             <li>url : <a href="http://hntec.co.kr" target="_blank">http://hntec.co.kr</a></li>
-            <li>소개 : 소방설비회사 HNTECH 홈페이지 입니다. </li>
-            <li>기술 : Typescript, React, Redux</li>
+            <li>소개 : 신설 소방설비회사 홈페이지 개발 프로젝트 입니다. </li>
+            <li>기술 : Typescript, React, Redux, Vite</li>
+            <li>팀원 : FE - 1, BE - 2</li>
           </ol>
 
           <ol>
-            <li>2022년 1월에 설립되어 운영중인 홈페이지가 없었던 신설 회사입니다.</li>
-            <li>리액트를 이용한 SPA로 데이터 트래픽을 감소시키고 효율적인 사용자 경험을 실현하였습니다.</li>
-            <li>Redux를 이용하여 state를 전역적으로 관리하였습니다.</li>
+            <li>2022년 1월에 설립되어 홈페이지 없이 운영중이던 신설 회사입니다.</li>
+            <li>리액트를 이용한 SPA로 데이터 트래픽을 감소시키고 자연스러운 사용자 경험을 제공하였습니다.</li>
+            <li>Redux를 이용하여 state를 전역적으로 관리하여 Prop drilling 현상을 감소시켰습니다.</li>
             <li>Redux-toolkit을 이용하여 Redux로 인한 과도한 코드량을 줄였습니다.</li>
             <li>2022년 11월부터 현재까지 홈페이지 유지보수 및 운영 중에 있습니다.</li>
           </ol>
         </article>
 
+        <!-- 
         <article>
           <h1>모두의 일기장 SNS 개발</h1>
+
           <ol>
             <li>url : <a href="https://di4ry.com" target="_blank">https://di4ry.com</a></li>
             <li>소개 : 일상 소통이 가능한 SNS 입니다.</li>
-            <li>기술 : Javascript, React, ContextAPI</li>
+            <li>기술 : Javascript, React, ContextAPI, Nodejs</li>
+            <li>팀원 : FE - 2, BE - 1</li>
           </ol>
 
           <ol>
-            <li></li>
+            <li>리액트를 이용한 SPA로 데이터 트래픽을 감소시키고 자연스러운 사용자 경험을 제공하였습니다.</li>
+            <li>ContextAPI와 useReducer를 이용해 전역으로 관리할 state를 분리하여 Prop drilling 현상을 감소시켰습니다.</li>
           </ol>
         </article>
+         -->
       </section>
     </main>
   </div>

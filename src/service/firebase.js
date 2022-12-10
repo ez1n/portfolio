@@ -1,20 +1,18 @@
-import dotenv from 'dotenv';
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-app.js";
+import { getDatabase } from "https://www.gstatic.com/firebasejs/9.14.0/firebase-database.js";
+//import { initializeApp } from "firebase/app";
+//import { getDatabase } from "firebase/database";
 
-dotenv.config();
-console.log(process.env.FIREBASE_API_KEY)
+//console.log(process.env.FIREBASE_API_KEY)
 
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_API_KEY,
-  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-  projectId: process.env.FIREBASE_PRJ_ID,
-  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.FIREBASE_MSG_SENDER_ID,
-  appId: process.env.FIREBASE_APP_ID,
-  measurementId: process.env.FIREBASE_MEASUREMENT_ID
+  apiKey: "AIzaSyCFoetGSizXp7yJhWxZtEshf_e4Wwb06ck",
+  databaseURL: "https://portfolio-ezin-default-rtdb.firebaseio.com",
 };
 
-// Initialize Firebase
+//Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+export const database = getDatabase(app);
+
+
+
