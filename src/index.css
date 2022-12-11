@@ -3,7 +3,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
 
 :root {
-  --main-color: #94e6ff;
+  --dot-color: rgb(255, 103, 126);
+  --line-color: rgb(255, 159, 178);
+  --main-cursor-color: #94e6ff;
   --main-bg-color: #034078;
   --main-font-color: #16425b;
   --main-link-color: #e8e8e4;
@@ -20,6 +22,8 @@
   font-weight: 700;
   font-style: normal;
 }
+
+/* 전체 설정 */
 
 * {
   scroll-behavior: smooth;
@@ -50,10 +54,13 @@ section {
   transition: all 2s;
 }
 
+/* 페이지 */
+
 #about-me,
 #history,
 #skill,
 #project {
+  box-sizing: border-box;
   min-height: 100vh;
   padding: 2rem;
 }
@@ -79,6 +86,8 @@ section {
   display: flex;
 }
 
+/* 포인터 */
+
 .pointer1,
 .pointer2 {
   position: absolute;
@@ -92,7 +101,7 @@ section {
   z-index: 2;
   width: 18px;
   height: 18px;
-  background-color: var(--main-color);
+  background-color: var(--main-cursor-color);
 }
 
 .pointer2 {
@@ -102,6 +111,8 @@ section {
   height: 25px;
   background-color: var(--main-bg-color);
 }
+
+/* 헤더 */
 
 .header {
   position: sticky;
@@ -166,6 +177,8 @@ section {
   font-weight: bold;
 }
 
+/* 메인 */
+
 .main {
   width: 100%;
 }
@@ -174,15 +187,75 @@ section {
   margin: 0;
 }
 
-.profile {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* history */
+.time-line-container {
+  width: max-content;
+  margin: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  background-color: var(--section-bg-color-1);
 }
 
-.profile-img {
-  width: 15rem;
+.time-line {
+  border-left: 3px solid var(--line-color);
 }
+
+.history-item {
+  position: relative;
+  margin: 2rem 0;
+}
+
+.history-item::before {
+  content: '';
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  background-color: var(--dot-color);
+  border-radius: 50%;
+  margin-top: 0.2rem;
+  left: -3rem;
+}
+
+/* projects */
+.prj-data {
+  font-size: 1.2em;
+}
+
+.prj-list {
+  display: flex;
+}
+
+.prj-list-button {
+  margin: 1rem 0.5rem;
+  font-size: 1.3rem;
+  cursor: pointer;
+  border: none;
+  background-color: unset;
+  transition: 0.5s;
+}
+
+.prj-list-button:hover {
+  transform: scale(1.04);
+}
+
+.selected {
+  text-decoration: underline;
+}
+
+.ektour-container,
+.hntech-container {
+  opacity: 0;
+  transition: opacity 1s;
+  width: 100%;
+  position: absolute;
+}
+
+.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+/* 슬라이드 */
 
 .slide-container {
   width: max-content;

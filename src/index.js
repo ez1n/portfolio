@@ -2,6 +2,10 @@ const section = document.querySelectorAll('section');
 const body = document.querySelector('.body');
 const pointer1 = document.querySelector('.pointer1');
 const pointer2 = document.querySelector('.pointer2');
+const ekPrjButton = document.querySelector('.ek-button');
+const hnPrjButton = document.querySelector('.hn-button');
+const ektour = document.querySelector('.ektour-container');
+const hntech = document.querySelector('.hntech-container');
 const slideWrapper = document.querySelector('.slide-wrapper');
 const ektourItems = document.querySelectorAll('.ektour');
 const ekPrevButton = document.querySelector('.ekhana-prev');
@@ -9,6 +13,15 @@ const ekNextButton = document.querySelector('.ekhana-next');
 const hntechItems = document.querySelectorAll('.hntech');
 const hnPrevButton = document.querySelector('.hntech-prev');
 const hnNextButton = document.querySelector('.hntech-next');
+
+/* page reload */
+function scrollPage() {
+  let page = window.location.hash ? document.querySelector(window.location.hash) : document.querySelector('#about-me');
+  const curPage = page.offsetTop;
+  window.scrollTo({ top: curPage });
+}
+
+window.onload = scrollPage();
 
 /* scroll event */
 let observer = new IntersectionObserver((e) => {
@@ -37,6 +50,22 @@ body.addEventListener('pointermove', (e) => {
 body.addEventListener('pointerleave', (e) => {
   pointer1.style.opacity = 0;
   pointer2.style.opacity = 0;
+});
+
+/* project button event */
+
+ekPrjButton.addEventListener('click', item => {
+  item.target.classList.add('selected');
+  hnPrjButton.classList.remove('selected');
+  ektour.classList.add('active');
+  hntech.classList.remove('active');
+});
+
+hnPrjButton.addEventListener('click', item => {
+  item.target.classList.add('selected');
+  ekPrjButton.classList.remove('selected');
+  hntech.classList.add('active');
+  ektour.classList.remove('active');
 });
 
 /* slide event */
