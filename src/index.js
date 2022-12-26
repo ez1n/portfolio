@@ -39,7 +39,39 @@ observer.observe(section[1]);
 observer.observe(section[2]);
 observer.observe(section[3]);
 
+/* snow event */
+
+const Body = document.querySelector('body');
+const today = new Date();
+const month = today.getMonth() + 1;
+
+function drawSnow() {
+  const snow = document.createElement('div');
+  const size = 10 + Math.random() * 2;
+  const duration = 20 + Math.random() * 10;
+
+  snow.classList.add('snow');
+  snow.style.width = `${size}px`;
+  snow.style.height = `${size}px`;
+  snow.style.left = `${Math.random() * window.innerWidth}px`;
+  snow.style.animation = `fall ${duration}s linear`;
+  Body.appendChild(snow);
+
+  setTimeout(() => {
+    Body.removeChild(snow);
+    drawSnow();
+  }, duration * 1000)
+}
+
+if (month > 10 || month < 3) {
+  for (let i = 0; i < 30; i++) {
+    setTimeout(drawSnow, 500 * i);
+  }
+}
+
 /* pointer event */
+
+/*
 body.addEventListener('pointermove', (e) => {
   pointer1.style.opacity = 1;
   pointer2.style.opacity = 1;
@@ -51,6 +83,7 @@ body.addEventListener('pointerleave', (e) => {
   pointer1.style.opacity = 0;
   pointer2.style.opacity = 0;
 });
+*/
 
 /* project button event */
 

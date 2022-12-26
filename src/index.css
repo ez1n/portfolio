@@ -3,6 +3,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
 
 :root {
+  --snow-color: #a9bfec;
   --dot-color: rgb(255, 103, 126);
   --line-color: rgb(255, 159, 178);
   --main-cursor-color: #94e6ff;
@@ -23,6 +24,15 @@
   font-style: normal;
 }
 
+@keyframes fall {
+  from {}
+
+  to {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
 /* 전체 설정 */
 
 * {
@@ -33,6 +43,7 @@
 
 body {
   margin: 0;
+  overflow-x: hidden;
 }
 
 li {
@@ -86,7 +97,21 @@ section {
   display: flex;
 }
 
+/* 눈 */
+.snow {
+  position: fixed;
+  top: -10px;
+  z-index: 2;
+  border-radius: 50%;
+  background-color: var(--snow-color);
+  filter: blur(5px);
+  -webkit-filter: blur(2px);
+  -moz-filter: blur(3px);
+}
+
 /* 포인터 */
+
+/*
 
 .pointer1,
 .pointer2 {
@@ -112,6 +137,8 @@ section {
   background-color: var(--main-bg-color);
 }
 
+*/
+
 /* 헤더 */
 
 .header {
@@ -120,9 +147,9 @@ section {
   left: 0;
   z-index: 1;
   min-width: fit-content;
-  height: 97vh;
+  height: 100vh;
   width: 20vw;
-  padding: 1rem;
+  padding: 0 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
