@@ -64,7 +64,7 @@ function drawSnow() {
 }
 
 if (month > 10 || month < 3) {
-  for (let i = 0; i < 30; i++) {
+  for (let i = 0; i < 40; i++) {
     setTimeout(drawSnow, 500 * i);
   }
 }
